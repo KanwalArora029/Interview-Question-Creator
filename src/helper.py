@@ -11,10 +11,12 @@ from src.prompt import *
 import os
 from dotenv import load_dotenv
 
+
 # OpenAI authentication
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+
 
 
 def file_processing(file_path):
@@ -50,6 +52,11 @@ def file_processing(file_path):
     )
 
     return document_ques_gen, document_answer_gen
+
+
+
+
+
 
 def llm_pipeline(file_path):
 
